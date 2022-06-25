@@ -29,6 +29,6 @@ class QueryTweaks implements BootstrappableInterface
             return;
         }
 
-        $wpQuery->set('post_type', ['page']);
+        $wpQuery->set('post_type', ['post']);
     }
 }

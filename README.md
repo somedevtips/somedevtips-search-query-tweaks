@@ -2,7 +2,7 @@
 Tweaks to the WordPress search query  
 
 Current tweaks:
-* search results only include the post_type `page`
+* search results only include the post_type `post`
 
 ## Installation requirements
 PHP 7.3 or higher
