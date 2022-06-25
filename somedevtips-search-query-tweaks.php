@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/somedevtips/somedevtips-search-query-tweaks
  * Description: Tweaks to the WordPress search query
  * Author: SomeDevTips
- * Version: 1.0.1
+ * Version: 1.1.0
  * Author URI: https://somedevtips.com/
  * Text Domain: somedevtips-search-query-tweaks
  * License: AGPLv3.0

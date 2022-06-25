@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Bootstrap interface
+ * Bootstrappableinterface
  *
  * Interface implemented by all classes involved in plugin boostrap.
  *
