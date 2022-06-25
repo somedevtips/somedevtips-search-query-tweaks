@@ -1,0 +1,47 @@
+{
+    "name": "somedevtips/somedevtips-search-query-tweaks",
+    "description": "WordPress plugin to tweak the search query",
+    "keywords": ["wordpress", "plugin", "somedevtips", "search", "search query"],
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Giancarlo Mosso",
+            "email": "giancarlo.mosso@gmail.com",
+            "homepage": "https://somedevtips.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SomeDevTipsSearchQueryTweaks\\": "src"
+        }
+    },
+    "require-dev": {
+        "inpsyde/php-coding-standards": "^1.0",
+        "php-stubs/wordpress-stubs": "^6.0",
+        "vimeo/psalm": "^4.23"
+    },
+    "scripts": {
+        "cs-check": [
+            "vendor/bin/phpcs"
+        ],
+        "cs-fix": [
+            "vendor/bin/phpcbf"
+        ],
+        "psalm": [
+            "vendor/bin/psalm"
+        ],
+        "psalm:no-cache": [
+            "vendor/bin/psalm --no-cache"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
