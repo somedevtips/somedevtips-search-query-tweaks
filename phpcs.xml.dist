@@ -30,4 +30,11 @@
         </properties>
     </rule>
 
+    <rule ref="Inpsyde.CodeQuality.NoAccessors.NoGetter">
+        <severity>0</severity>
+    </rule>
+
+    <rule ref="Inpsyde.CodeQuality.NoAccessors.NoSetter">
+        <severity>0</severity>
+    </rule>
 </ruleset>

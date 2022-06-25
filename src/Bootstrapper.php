@@ -15,7 +15,7 @@ declare(strict_types=1);
 namespace SomeDevTipsSearchQueryTweaks;
 
 use SomeDevTipsSearchQueryTweaks\Query\QueryTweaks;
-use SomeDevTipsSearchQueryTweaks\Settings\PageOptions;
+use SomeDevTipsSearchQueryTweaks\Settings\Options\Page as PageOptions;
 use SomeDevTipsSearchQueryTweaks\Settings\Sections;
 use SomeDevTipsSearchQueryTweaks\Settings\Page as SettingsPage;
 
@@ -67,7 +67,10 @@ class Bootstrapper
 
         // TODO: create page builder class and remove from here
         $settingsPageOptions = (new PageOptions())
-            ->setPageTitle(__('SomeDevTips Search Query Options', 'somedevtips-search-query-tweaks'))
+            ->setPageTitle(__(
+                'SomeDevTips Search Query Options',
+                'somedevtips-search-query-tweaks'
+            ))
             ->setMenuTitle(__('Search Query Options', 'somedevtips-search-query-tweaks'))
             ->setMenuSlug('somedevtips-search-query-tweaks-plugin');
         $sections = new Sections();

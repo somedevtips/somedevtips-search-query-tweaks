@@ -15,6 +15,7 @@ declare(strict_types=1);
 namespace SomeDevTipsSearchQueryTweaks\Settings;
 
 use SomeDevTipsSearchQueryTweaks\BootstrappableInterface;
+use SomeDevTipsSearchQueryTweaks\Settings\Options\Page as PageOptions;
 
 class Page implements BootstrappableInterface, RenderableInterface
 {
@@ -55,10 +56,17 @@ class Page implements BootstrappableInterface, RenderableInterface
     {
         ?>
         <div class="wrap">
-            <h1><?= $this->pageOptions->getMenuTitle() ?></h1>
+            <h1><?= esc_html($this->pageOptions->getMenuTitle()) ?></h1>
             <form action="options.php" method="post">
-                <?php $this->sections->render(); ?>
-                <input name="submit" class="button button-primary" type="submit" value="<?php esc_attr_e( 'Save' ); ?>" />
+                <?php
+                    $this->sections->render();
+                ?>
+                <input
+                        name="submit"
+                        class="button button-primary"
+                        type="submit"
+                        value="<?php esc_attr_e('Save', 'somedevtips-search-query-tweaks'); ?>"
+                />
             </form>
         </div>
         <?php

@@ -12,9 +12,9 @@
 # -*- coding: utf-8 -*-
 declare(strict_types=1);
 
-namespace SomeDevTipsSearchQueryTweaks\Settings;
+namespace SomeDevTipsSearchQueryTweaks\Settings\Options;
 
-class PageOptions
+class Page
 {
     /**
      * @var string
@@ -46,9 +46,9 @@ class PageOptions
 
     /**
      * @param string $pageTitle
-     * @return PageOptions
+     * @return Page
      */
-    public function setPageTitle(string $pageTitle): PageOptions
+    public function setPageTitle(string $pageTitle): Page
     {
         $this->pageTitle = $pageTitle;
         return $this;
@@ -64,9 +64,9 @@ class PageOptions
 
     /**
      * @param string $menuTitle
-     * @return PageOptions
+     * @return Page
      */
-    public function setMenuTitle(string $menuTitle): PageOptions
+    public function setMenuTitle(string $menuTitle): Page
     {
         $this->menuTitle = $menuTitle;
         return $this;
@@ -82,9 +82,9 @@ class PageOptions
 
     /**
      * @param string $menuSlug
-     * @return PageOptions
+     * @return Page
      */
-    public function setMenuSlug(string $menuSlug): PageOptions
+    public function setMenuSlug(string $menuSlug): Page
     {
         $this->menuSlug = $menuSlug;
         return $this;
@@ -100,9 +100,9 @@ class PageOptions
 
     /**
      * @param int|null $menuPosition
-     * @return PageOptions
+     * @return Page
      */
-    public function setMenuPosition(?int $menuPosition): PageOptions
+    public function setMenuPosition(?int $menuPosition): Page
     {
         $this->menuPosition = $menuPosition;
         return $this;
