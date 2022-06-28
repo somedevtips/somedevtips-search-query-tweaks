@@ -24,14 +24,8 @@ class Page implements BootstrappableInterface, RenderableInterface
      */
     private $pageOptions;
 
-    /**
-     * @var Sections
-     */
-    private $sections;
-
-    public function __construct(PageOptions $pageOptions, Sections $sections)
+    public function __construct(PageOptions $pageOptions)
     {
-        $this->sections = $sections;
         $this->pageOptions = $pageOptions;
     }
 
@@ -59,14 +53,11 @@ class Page implements BootstrappableInterface, RenderableInterface
             <h1><?= esc_html($this->pageOptions->getMenuTitle()) ?></h1>
             <form action="options.php" method="post">
                 <?php
-                    $this->sections->render();
+                    settings_fields($this->pageOptions->getMenuSlug());
+                    do_settings_sections($this->pageOptions->getMenuSlug());
+
+                    submit_button(__('Save', 'somedevtips-search-query-tweaks'));
                 ?>
-                <input
-                        name="submit"
-                        class="button button-primary"
-                        type="submit"
-                        value="<?php esc_attr_e('Save', 'somedevtips-search-query-tweaks'); ?>"
-                />
             </form>
         </div>
         <?php

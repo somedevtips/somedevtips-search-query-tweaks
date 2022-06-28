@@ -1,7 +1,7 @@
 <?php
 
 /**
- * PageOptions class
+ * Page class
  *
  * Manages the options of a settings page.
  *

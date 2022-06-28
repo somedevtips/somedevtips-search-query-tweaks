@@ -14,10 +14,17 @@ declare(strict_types=1);
 
 namespace SomeDevTipsSearchQueryTweaks\Settings;
 
-class Sections implements RenderableInterface
+use SomeDevTipsSearchQueryTweaks\Settings\Options\Section as SectionOptions;
+
+class Sections
 {
-    public function render(): void
+    public function add(SectionOptions $sectionOptions): void
     {
-        echo 'Sections';
+        add_settings_section(
+            $sectionOptions->getId(),
+            $sectionOptions->getTitle(),
+            [(new Section($sectionOptions)), 'render'],
+            $sectionOptions->getPageSlug()
+        );
     }
 }

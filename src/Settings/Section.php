@@ -14,12 +14,24 @@ declare(strict_types=1);
 
 namespace SomeDevTipsSearchQueryTweaks\Settings;
 
-use SomeDevTipsSearchQueryTweaks\BootstrappableInterface;
+use SomeDevTipsSearchQueryTweaks\Settings\Options\Section as SectionOptions;
 
-class Section implements BootstrappableInterface
+class Section implements RenderableInterface
 {
-    public function bootstrap(): void
+    /**
+     * @var SectionOptions
+     */
+    private $options;
+
+    public function __construct(SectionOptions $sectionOptions)
     {
-        // TODO: Implement bootstrap() method.
+        $this->options = $sectionOptions;
+    }
+
+    public function render(): void
+    {
+        ?>
+        <p><?= esc_html($this->options->getDescription()); ?></p>
+        <?php
     }
 }
