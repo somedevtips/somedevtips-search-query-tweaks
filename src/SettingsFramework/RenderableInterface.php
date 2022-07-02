@@ -12,7 +12,7 @@
 # -*- coding: utf-8 -*-
 declare(strict_types=1);
 
-namespace SomeDevTipsSearchQueryTweaks\Settings;
+namespace SomeDevTipsSearchQueryTweaks\SettingsFramework;
 
 interface RenderableInterface
 {

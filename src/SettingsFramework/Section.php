@@ -12,9 +12,9 @@
 # -*- coding: utf-8 -*-
 declare(strict_types=1);
 
-namespace SomeDevTipsSearchQueryTweaks\Settings;
+namespace SomeDevTipsSearchQueryTweaks\SettingsFramework;
 
-use SomeDevTipsSearchQueryTweaks\Settings\Options\Section as SectionOptions;
+use SomeDevTipsSearchQueryTweaks\SettingsFramework\Options\Section as SectionOptions;
 
 class Section implements RenderableInterface
 {
@@ -26,6 +26,11 @@ class Section implements RenderableInterface
     public function __construct(SectionOptions $sectionOptions)
     {
         $this->options = $sectionOptions;
+    }
+
+    public function addField(): void
+    {
+
     }
 
     public function render(): void

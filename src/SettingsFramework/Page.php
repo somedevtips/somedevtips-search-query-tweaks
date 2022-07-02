@@ -12,10 +12,10 @@
 # -*- coding: utf-8 -*-
 declare(strict_types=1);
 
-namespace SomeDevTipsSearchQueryTweaks\Settings;
+namespace SomeDevTipsSearchQueryTweaks\SettingsFramework;
 
 use SomeDevTipsSearchQueryTweaks\BootstrappableInterface;
-use SomeDevTipsSearchQueryTweaks\Settings\Options\Page as PageOptions;
+use SomeDevTipsSearchQueryTweaks\SettingsFramework\Options\Page as PageOptions;
 
 class Page implements BootstrappableInterface, RenderableInterface
 {

@@ -15,8 +15,10 @@ declare(strict_types=1);
 namespace SomeDevTipsSearchQueryTweaks\Settings;
 
 use SomeDevTipsSearchQueryTweaks\BootstrappableInterface;
-use SomeDevTipsSearchQueryTweaks\Settings\Options\Page as PageOptions;
-use SomeDevTipsSearchQueryTweaks\Settings\Options\Section as SectionOptions;
+use SomeDevTipsSearchQueryTweaks\SettingsFramework\Page;
+use SomeDevTipsSearchQueryTweaks\SettingsFramework\Sections;
+use SomeDevTipsSearchQueryTweaks\SettingsFramework\Options\Page as PageOptions;
+use SomeDevTipsSearchQueryTweaks\SettingsFramework\Options\Section as SectionOptions;
 
 class PageBuilder implements BootstrappableInterface
 {
@@ -50,7 +52,7 @@ class PageBuilder implements BootstrappableInterface
     private function sectionOptions(): SectionOptions
     {
         return (new SectionOptions())
-                ->setId('pippo')
+                ->setId('somedevtips-search-query-tweaks-options')
                 ->setTitle(__('Search query post types', 'somedevtips-search-query-tweaks'))
                 ->setPageSlug($this->pageOptions()->getMenuSlug())
                 ->setDescription(
